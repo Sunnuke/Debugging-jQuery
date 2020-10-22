@@ -5,7 +5,14 @@
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 	<script type="text/javascript">
 	
-			$('p, h3, li').hoverfunction(){
+// Done!\When the survey button is clicked, the page should alert the user with the message that is specified on the code.
+// Done!\When either one of the images is clicked, it should slide up and hide. When either one of the small headers underneath each picture is clicked, it should slide down and unhide the images.
+// Done!\When any of the text within the red div is hovered on, it should turn white. This includes the list items and headers.
+// Done!\When the link in the red div is clicked, an alert box should pop up containing a message.
+
+	$(document).ready(function(){
+	
+			$('p, h3, li').hover(function(){
 				$(this).css('color', 'white');
 			}, function(){
 				$(this).css('color', 'black');
@@ -17,17 +24,17 @@
 
 			$('img').click(function(){
 				$(this).slideUp();
-			);
+			});
 
 			$('h5').click(function(){
-				$('img').slide Down();
+				$('img').slideDown();
 			});
 
 			$('button').click(function(){
-				var result = $('input:checked').value()  
+				var result = $('input:checked').val()  
 				alert("Thank you for your input, we like " + result + " too!");
 			});	
-
+    });
 	</script>
 </head>
 <body>
